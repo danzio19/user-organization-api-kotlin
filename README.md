@@ -41,6 +41,8 @@ Once running, the interactive API documentation is available via Swagger UI:
 
 Authentication is simulated using an `X-User-ID` header on protected endpoints. **Note:** The very first user created (without a header) automatically becomes an `ADMIN`.
 
+You can view the database via **`http://localhost:8080/h2-console`**
+
 ## Key Architectural Decisions
 
 -   **DTOs for API Layer:** The API returns DTOs, not JPA entities, to prevent lazy-loading errors and decouple the API from the database schema.
