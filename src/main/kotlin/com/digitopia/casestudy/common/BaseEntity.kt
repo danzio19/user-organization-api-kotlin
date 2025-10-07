@@ -1,5 +1,6 @@
 package com.digitopia.casestudy.common
 
+import jakarta.persistence.EntityListeners
 import jakarta.persistence.Id
 import jakarta.persistence.MappedSuperclass
 import org.hibernate.annotations.CreationTimestamp
@@ -8,6 +9,7 @@ import java.util.Date
 import java.util.UUID
 
 @MappedSuperclass
+@EntityListeners(AuditListener::class)
 abstract class BaseEntity(
     @Id
     val id: UUID = UUID.randomUUID(),
